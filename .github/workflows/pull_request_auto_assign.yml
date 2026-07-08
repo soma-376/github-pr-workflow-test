@@ -8,9 +8,6 @@ on:
 jobs:
   auto-assign:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-      issues: write
     steps:
       - uses: kentaro-m/auto-assign-action@v2.0.2
         with:
