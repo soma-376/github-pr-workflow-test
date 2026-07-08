@@ -64,8 +64,8 @@ jobs:
               const issueTitle = data.fields.summary;
               console.log(`Jira issue title: ${issueTitle}`);
 
-              // --- PR 제목: feat: <이슈 제목> ---
-              const prTitle = `${newTypeName}: ${issueTitle}`;
+              // --- PR 제목: <KEY> feat: <이슈 제목> (CONVENTION.md 형식, 자동전환 키 유지) ---
+              const prTitle = `${issueKey} ${newTypeName}: ${issueTitle}`;
               console.log(`New PR title: ${prTitle}`);
 
               // --- PR 본문: placeholder → Jira 티켓 링크 ---
