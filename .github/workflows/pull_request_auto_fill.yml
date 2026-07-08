@@ -76,7 +76,7 @@ jobs:
                 pull_number: context.payload.pull_request.number,
               });
               let prBody = pr.body || '';
-              const jiraLink = `[${issueKey}](https://${jiraSite}/browse/${issueKey})`;
+              const jiraLink = `**[${issueKey} ${issueTitle}](https://${jiraSite}/browse/${issueKey})**`;
               if (prBody.includes('{jira-ticket-placeholder-do-not-modify}')) {
                 prBody = prBody.replaceAll('{jira-ticket-placeholder-do-not-modify}', jiraLink);
                 console.log('본문 placeholder를 Jira 링크로 치환했습니다.');
